@@ -4,4 +4,4 @@ const db = {
     Book: require('./Book.js')(Schema, model)
 }
 
-module.export = db
+module.exports = db
