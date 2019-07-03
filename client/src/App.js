@@ -16,7 +16,7 @@ class App extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault()
-    Axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.bookSearch}&key=AIzaSyAHUvS6qzHlvDeDvwthvsWUlYs3NjnqqY4`)
+    Axios.get(`https://www.googleapis.com/books/v1/volumes`)
       .then(({ data: { items } }) => {
         let book = []
         items.forEach(bookItem => {
