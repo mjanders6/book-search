@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import SearchForm from '../src/components/SearchForm'
 import Book from '../src/components/Books'
@@ -17,7 +16,7 @@ class App extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault()
-    Axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.bookSearch}&key=${process.env.googleBooksKey}`)
+    Axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.bookSearch}&key=`)
       .then(({ data: { items } }) => {
         let book = []
         items.forEach(bookItem => {

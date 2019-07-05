@@ -1,5 +1,4 @@
 const { Book } = require('../models')
-const axios = require('axios')
 
 module.exports = app => {
     app.get('/books', (req, res) => {
@@ -11,5 +10,10 @@ module.exports = app => {
         Book.create(req.body)
             .then(res.sendStatus(200))
             .catch(e => console.error(e))
+    })
+    app.delete('/books/:id', (req, res) => {
+        Book.findByIdAndDelete(req.params.id)
+            .then(_ => res.sendStatus(200))
+            .catch(e => console.log(e))
     })
 }
