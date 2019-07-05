@@ -1,5 +1,6 @@
+
 import React, { Component } from 'react';
-import Search from '../src/components/Search'
+import SearchForm from '../src/components/SearchForm'
 import Book from '../src/components/Books'
 import Axios from 'axios'
 
@@ -16,7 +17,7 @@ class App extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault()
-    Axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.bookSearch}&key=AIzaSyAHUvS6qzHlvDeDvwthvsWUlYs3NjnqqY4`)
+    Axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.bookSearch}&key=${process.env.googleBooksKey}`)
       .then(({ data: { items } }) => {
         let book = []
         items.forEach(bookItem => {
@@ -30,7 +31,9 @@ class App extends Component {
           book.push(bookCollection)
         })
         console.log(book)
-        
+        this.setState({
+          book
+        })
       })
       .catch(e => console.error(e))
   }
@@ -38,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Search 
+        <SearchForm 
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
