@@ -7,7 +7,7 @@ const SearchForm = ({ handleFormSubmit, handleInputChange, bookSearch}) =>
             <input id="bookSearch" type="text" value={bookSearch} onChange={handleInputChange} />
         </p>
 
-        <button onClick={handleFormSubmit}>Add Student</button>
+        <button onClick={handleFormSubmit}>Find Books</button>
     </form>
 
     export default SearchForm

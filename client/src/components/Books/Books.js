@@ -1,11 +1,11 @@
 import React from 'react'
 import { Card, CardImg, Container, Row, Col, CardBody, CardText, Button } from 'reactstrap';
 
-const Book = ({ book }) =>
+const Book = ({ book, handleSaveBook, handleDelete, isSaved }) =>
     <div>
         <Container>
             {
-                book.map(({ title, authors, description, image, link }, index) => (
+                book.map(({ title, authors, description, image, id }, index) => (
                     <>
                         <Row>
                             <Col sm="6">
@@ -14,7 +14,7 @@ const Book = ({ book }) =>
                                     <CardBody>
                                         <h2>{title} by {authors}</h2>
                                         <CardText>{description}</CardText>
-                                        <Button>Save</Button>
+                                        <Button id={id} onClick={handleSaveBook}>Save</Button>
                                     </CardBody>
                                 </Card>
                             </Col>

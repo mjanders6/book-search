@@ -12,7 +12,7 @@ module.exports = (Schema, model) => {
             type: String
         },
         authors: {
-            type: String
+            type: Array
         },
         description: {
             type: String
