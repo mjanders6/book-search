@@ -4,7 +4,7 @@ import React from 'react';
 const Home = _ => {
     return (
         <>
-            <h1>Aloha World</h1>
+            <h1>Aloha Book Worm</h1>
         </>
     )
 }
