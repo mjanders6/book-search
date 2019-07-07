@@ -9,7 +9,8 @@ class Search extends Component {
   state = {
     bookSearch: '',
     book: [],
-    bookSaved: false
+    bookSaved: false,
+    isSaved: this.props.isSaved
   }
 
   componentDidMount() {
@@ -38,7 +39,8 @@ class Search extends Component {
         })
         console.log(book)
         this.setState({
-          book
+          book,
+          isSaved: true
         })
       })
       .catch(e => console.error(e))
@@ -50,11 +52,12 @@ class Search extends Component {
     console.log(this.state.book[event.target.id])
   }
 
+
   render() {
     return (
       <>
         <SearchForm handleFormSubmit={this.handleFormSubmit} handleInputChange={this.handleInputChange} />
-        <Book book={this.state.book} handleSaveBook={this.handleSaveBook}/>
+        <Book book={this.state.book} handleSaveBook={this.handleSaveBook} />
       </>
     )
   }

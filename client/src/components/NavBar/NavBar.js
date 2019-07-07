@@ -1,4 +1,5 @@
 import React from 'react';
+import './NavBar.css'
 import { Link } from 'react-router-dom'
 import { Collapse, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 

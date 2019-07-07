@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardImg, Container, Row, Col, CardBody, CardText, Button } from 'reactstrap';
 
-const Book = ({ book, handleSaveBook, isSaved }) =>
+const Book = ({ book, handleDeleteBook }) =>
     <div>
         <Container>
             {
@@ -14,7 +14,7 @@ const Book = ({ book, handleSaveBook, isSaved }) =>
                                     <CardBody>
                                         <h2>{title} by {authors}</h2>
                                         <CardText>{description}</CardText>
-                                        <Button id={id} onClick={handleSaveBook}>Save</Button>
+                                        <Button id={id} onClick={handleDeleteBook}>Delete</Button>
                                     </CardBody>
                                 </Card>
                             </Col>
