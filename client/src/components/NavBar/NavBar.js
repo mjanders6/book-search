@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarBrand, Nav, NavItem } from 'reactstrap';
 
-const NavB = ({ toggleSearch }) => {
+const NavB = () => {
 
     return (
       <div>
@@ -11,10 +11,10 @@ const NavB = ({ toggleSearch }) => {
           <Collapse navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink><Link to="/Books">Book Search</Link></NavLink>
+                <Link to="/Books">Book Search</Link>
               </NavItem>
               <NavItem>
-                <NavLink><Link to="/Saved">Saved Books</Link></NavLink>
+                <Link to="/Saved">Saved Books</Link>
               </NavItem>
             </Nav>
           </Collapse>
