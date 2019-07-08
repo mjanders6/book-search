@@ -1,4 +1,5 @@
 import React from 'react'
+import './SavedBooks.css'
 import { Card, CardImg, Container, Row, Col, CardBody, CardText, Button } from 'reactstrap';
 
 const Book = ({ book, handleDeleteBook }) =>
@@ -8,9 +9,9 @@ const Book = ({ book, handleDeleteBook }) =>
                 book.map(({ title, authors, description, image, id }, index) => (
                     <>
                         <Row>
-                            <Col sm="6">
+                            <Col xs="12" sm="5" lg="6">
                                 <Card>
-                                    <CardImg top width="20%" src={image} alt={title} />
+                                    <CardImg top src={image} alt={title} />
                                     <CardBody>
                                         <h2>{title} by {authors}</h2>
                                         <CardText>{description}</CardText>

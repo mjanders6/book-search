@@ -1,13 +1,16 @@
 import React from 'react'
+import { Form, FormGroup, Button, Label, Input, Col } from 'reactstrap'
 
-const SearchForm = ({ handleFormSubmit, handleInputChange, bookSearch}) =>
-    <form>
-        <p>
-            <label htmlFor="bookSearch">Book Search:</label>
-            <input id="bookSearch" type="text" value={bookSearch} onChange={handleInputChange} />
-        </p>
+const SearchForm = ({ handleFormSubmit, handleInputChange, bookSearch }) =>
+    <Form>
+        <FormGroup row>
+            <Col xs={8} sm={6} lg={6}>
+                <Label htmlFor="bookSearch">Book Search:</Label>
+                <Input id="bookSearch" type="text" name="search" value={bookSearch} onChange={handleInputChange} />
+            </Col>
+        </FormGroup>
 
-        <button onClick={handleFormSubmit}>Find Books</button>
-    </form>
+        <Button onClick={handleFormSubmit}>Find Books</Button>
+    </Form>
 
-    export default SearchForm
+export default SearchForm

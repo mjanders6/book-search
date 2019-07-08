@@ -8,7 +8,7 @@ const Book = ({ book, handleSaveBook, isSaved }) =>
                 book.map(({ title, authors, description, image, id }, index) => (
                     <>
                         <Row>
-                            <Col sm="6">
+                            <Col xs="12" sm="5" lg="6">
                                 <Card>
                                     <CardImg top width="20%" src={image} alt={title} />
                                     <CardBody>
