@@ -14,7 +14,7 @@ Book Worm allows the user to search for books through google's API book search.
 ### Save
 ![Save](/assets/Save.png)
 
-### Saveed Books
+### Saved Books
 ![Saved](/assets/Saved.png)
 
 ### Delete a Book
